@@ -7,6 +7,9 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 
 
+const PORT = 8000;
+
+
 const users = {};
 
 io.on('connection', socket => {
@@ -23,13 +26,13 @@ io.on('connection', socket => {
     });
 
     //if someone leaves the chat, let others know
-    socket.on('disconnect', message => {
+    socket.on('disconnect', _ => {
         socket.broadcast.emit('left', users[socket.id]);
         delete users[socket.id];
     });
 })
 
 app.use('/', express.static(path.join(path.dirname(__dirname), "browserClient")));
-server.listen(8000, () => {
-    console.log('listening on *:8000');
+server.listen(PORT, () => {
+    console.log('listening on `http://localhoszt:8000`');
 });
