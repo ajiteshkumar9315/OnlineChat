@@ -34,5 +34,5 @@ io.on('connection', socket => {
 
 app.use('/', express.static(path.join(path.dirname(__dirname), "browserClient")));
 server.listen(PORT, () => {
-    console.log('listening on `http://localhoszt:8000`');
+    console.log(`listening on \`http://localhost:${PORT}\``);
 });
