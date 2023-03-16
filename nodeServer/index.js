@@ -7,7 +7,7 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 
 
-const PORT = 8000;
+const PORT = process.env.port || 8000;
 
 
 const users = {};
