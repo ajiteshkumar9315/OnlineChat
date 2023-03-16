@@ -1,6 +1,11 @@
 {
   "name": "OnlineChat",
   "version": "1.0.0",
+  "scripts": {
+    "start": "npm run -w nodeServer start",
+    "build": "npm install",
+    "dev": "npm run -w nodeServer dev"
+  },
   "workspaces": [
     "browserClient",
     "nodeServer"
