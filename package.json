@@ -1,6 +1,8 @@
 {
-  "dependencies": {
-    "nodemon": "^2.0.20",
-    "type":"module"
-  }
+  "name": "OnlineChat",
+  "version": "1.0.0",
+  "workspaces": [
+    "browserClient",
+    "nodeServer"
+  ]
 }

@@ -1,0 +1,7 @@
+{
+  "name": "browserClient",
+  "version": "1.0.0",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
